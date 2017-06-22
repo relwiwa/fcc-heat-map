@@ -1,6 +1,6 @@
 const SPEX = {
   chart: {
-    cellHeight: 10,
+    cellHeight: 20,
     colors: [
       '#4575b4',
       '#74add1',
@@ -18,7 +18,7 @@ const SPEX = {
   dataUrl: 'https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/global-temperature.json',
   styles: {
     colorBorders: 'lightgray',
-    fontSizeAxis: '14px',
+    fontSizeAxis: '13px',
     fontSizeLegend: '12px'
   },
 }

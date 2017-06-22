@@ -3,7 +3,7 @@ import { format as d3Format } from 'd3-format';
 
 class Legend extends Component {
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps) {
     if (this.props.chartWidth === nextProps.chartWidth) {
       return false;
     }
@@ -20,7 +20,7 @@ class Legend extends Component {
         legendItems.push(<br />)
       }
       legendItems.push(
-        <span style={{ display: 'inline-block', fontSize: fontSize, width: legendWidth, background: item.color}}>{d3Format('.2r')(item.start)}°C</span>
+        <span key={item.color} style={{ display: 'inline-block', fontSize: fontSize, width: legendWidth, background: item.color}}>{d3Format('.2r')(item.start)}°C</span>
       );
     });
     return legendItems;
