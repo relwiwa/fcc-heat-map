@@ -83,7 +83,6 @@ class StaticSvgComponents extends Component {
           styleSpex={styleSpex}
           xScale={xScale}
           yScale={yScale}
-
         />
       </g>
     );

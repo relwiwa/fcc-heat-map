@@ -1,10 +1,12 @@
 import axios from 'axios';
+import es6Promise from 'es6-promise';
 import React, { Component } from 'react';
 
 import MapContainerWithResizeHandling from './map-container-with-resize-handling';
 
 import SPEX from '../data/heat-map.spex';
 
+es6Promise.polyfill();
 const axiosConfig = axios.create({
   timeout: 5000
 });
@@ -121,7 +123,7 @@ class HeatMap extends Component {
         <div className="heat-map grid-x" style={{marginBottom: 50}}>
           <div className="cell text-center">
             <h1>Map of Global Monthly Temperatures <nobr>1753 - 2015</nobr></h1>
-            <p>This map displays the variance of global monthly temperatures. Each month's value is compared to the base temperature of 8.66 °C. This is the average global monthly temperature between January 1951 and December 1980.</p>  
+            <p>This map displays the variance of global monthly temperatures. Each month's value is compared to the base temperature of <nobr>8.66 °C.</nobr> This is the average global monthly temperature between January 1951 and December 1980.</p>
             {errorMessage && <p><b>An error happened while fetching data</b></p>}
             {progressMessage && <p><b><i className="fa fa-spinner fa-spin"></i> Fetching data</b></p>}
             {(!errorMessage && currData.length > 0) && <MapContainerWithResizeHandling

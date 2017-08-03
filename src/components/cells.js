@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import '../styles/cells.scss';
 
-const Bars = (props) => {
+const Cells = (props) => {
   const { cellHeight, cellWidth, currData, margins, onUpdateCurrDatum, styleSpex, xScale, yScale } = props;
 
   return (
@@ -27,4 +27,4 @@ const Bars = (props) => {
   );
 }
 
-export default Bars;
+export default Cells;
