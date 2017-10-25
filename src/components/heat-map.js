@@ -1,12 +1,10 @@
 import axios from 'axios';
-import es6Promise from 'es6-promise';
 import React, { Component } from 'react';
 
 import MapContainerWithResizeHandling from './map-container-with-resize-handling';
 
 import SPEX from '../data/heat-map.spex';
 
-es6Promise.polyfill();
 const axiosConfig = axios.create({
   timeout: 5000
 });
