@@ -13,7 +13,11 @@ const SPEX = {
       '#d73027',
       '#a50026'
     ],
-    margins: { top: 50, right: 40, bottom: 30, left: 40 }
+    margins: { top: 50, right: 40, bottom: 30, left: 40 },
+    ratioFactor: {
+      small: 1,
+      medium: 1
+    },
   },
   dataUrl: 'https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/global-temperature.json',
   styles: {

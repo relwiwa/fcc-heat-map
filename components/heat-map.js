@@ -1,4 +1,5 @@
 import axios from 'axios';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
 
 import MapContainerWithResizeHandling from './map-container-with-resize-handling';
@@ -120,10 +121,10 @@ class HeatMap extends Component {
       <div className="grid-container grid-container-padded">
         <div className="heat-map grid-x" style={{marginBottom: 50}}>
           <div className="cell text-center">
-            <h1>Map of Global Monthly Temperatures <nobr>1753 - 2015</nobr></h1>
-            <p>This map displays the variance of global monthly temperatures. Each month's value is compared to the base temperature of <nobr>8.66 °C.</nobr> This is the average global monthly temperature between January 1951 and December 1980.</p>
+            <h1>Heat Map</h1>
+            <p>This map displays the variance of global monthly temperatures 1753 - 2015. Each month's value is compared to the base temperature of <nobr>8.66 °C.</nobr> This is the average global monthly temperature between January 1951 and December 1980.</p>
             {errorMessage && <p><b>An error happened while fetching data</b></p>}
-            {progressMessage && <p><b><i className="fa fa-spinner fa-spin"></i> Fetching data</b></p>}
+            {progressMessage && <p><b><FontAwesomeIcon icon="spinner" spin /> Fetching data</b></p>}
             {(!errorMessage && currData.length > 0) && <MapContainerWithResizeHandling
               chartSpex={SPEX.chart}
               colorScheme={colorScheme}
