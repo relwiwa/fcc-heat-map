@@ -1,5 +1,5 @@
 import axios from 'axios';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
 
 import MapContainerWithResizeHandling from './map-container-with-resize-handling';
